@@ -1,0 +1,14 @@
+{
+	"name": "url-shortener",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"server": "cd server && yarn start",
+		"web": "cd client && yarn start",
+		"start": "concurrently \"yarn run server\" \"yarn run web\""
+	},
+	"devDependencies": {
+		"concurrently": "^5.3.0"
+	}
+}
