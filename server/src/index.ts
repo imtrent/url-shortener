@@ -1,14 +1,14 @@
 import 'reflect-metadata';
 import { ApolloServer } from 'apollo-server';
 import { buildSchema } from 'type-graphql';
-import { TestResolver } from './resolver/TestResolver';
+import { UrlResolver } from './resolver/UrlResolver';
 
 import { connectDb } from './db';
 
 async function bootstrap() {
     await connectDb();
     const schema = await buildSchema({
-        resolvers: [TestResolver]
+        resolvers: [UrlResolver]
     });
 
     const server = new ApolloServer({
